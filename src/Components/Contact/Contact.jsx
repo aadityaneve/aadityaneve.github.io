@@ -22,6 +22,7 @@ import {
     FaMedium,
 } from 'react-icons/fa';
 import { SiGmail, SiLeetcode } from 'react-icons/si';
+import { v4 as uuidv4 } from 'uuid';
 
 const footerData = [
     {
@@ -153,7 +154,7 @@ const Contact = () => {
                 <Column>
                     <LinksCont>
                         {footerData.map((item) => (
-                            <div title={item.title} style={{ display: 'flex' }}>
+                            <div key={uuidv4()} title={item.title} style={{ display: 'flex' }}>
                                 <div>
                                     {/* <a target="_blank" rel="noreferrer" href={item.link}  style={{textDecoration:"none"}}> */}
                                     {item.icon}

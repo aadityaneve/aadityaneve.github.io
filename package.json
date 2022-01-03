@@ -15,7 +15,8 @@
         "react-switch": "^6.0.0",
         "react-toastify": "^7.0.4",
         "styled-components": "^5.3.0",
-        "typewriter-effect": "^2.18.2"
+        "typewriter-effect": "^2.18.2",
+        "uuid": "^8.3.2"
     },
     "scripts": {
         "start": "react-scripts start",

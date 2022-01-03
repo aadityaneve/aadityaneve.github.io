@@ -12,6 +12,8 @@ import {
 import { Container, Common, H1 } from '../../SharedStyles/SharedStyles';
 import { FaHtml5, FaReact, FaJs, FaCss3 } from 'react-icons/fa';
 import { SiMongodb, SiNodeDotJs, SiRedux, SiHeroku } from 'react-icons/si';
+import { v4 as uuidv4 } from 'uuid';
+
 const Projects = () => {
     const projects = [
         {
@@ -89,7 +91,7 @@ const Projects = () => {
                 </Common>
                 <Row>
                     {projects.map((item) => (
-                        <BoxDiv key={item.id}>
+                        <BoxDiv key={uuidv4()}>
                             <ServiceBox>
                                 <img
                                     src={item.image}
@@ -114,7 +116,10 @@ const Projects = () => {
                                         }}
                                     >
                                         {item.tech_stack.map((item) => (
-                                            <div className='iconsTechStack'>
+                                            <div
+                                                key={uuidv4()}
+                                                className='iconsTechStack'
+                                            >
                                                 {item}
                                             </div>
                                         ))}
