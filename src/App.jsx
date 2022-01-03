@@ -8,7 +8,7 @@ import Contact from './Components/Contact/Contact';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import { ThemeProvider } from 'styled-components';
 import Home from './Container/Home';
-// import AnimatedCursor from 'react-animated-cursor';
+import AnimatedCursor from 'react-animated-cursor';
 
 const DarkTheme = {
     backgroundColor: '#15161b', //021f34//#1f2022
@@ -45,17 +45,21 @@ const App = () => {
     return (
         <ThemeProvider theme={themes[currentTheme]}>
             <div className='app'>
-                {/* <AnimatedCursor
+                <AnimatedCursor
                     innerSize={10}
                     outerSize={30}
-                    color='10, 0, 20'
+                    color='255, 46, 99'
                     outerAlpha={0.4}
                     innerScale={0.6}
                     outerScale={0}
-                /> */}
+                />
 
                 <Router>
                     <Switch>
+                        <Home
+                            currentTheme={currentTheme}
+                            themeToggler={themeToggler}
+                        />
                         <Route exact path='/'>
                             <Home
                                 currentTheme={currentTheme}
