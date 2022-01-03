@@ -19,7 +19,7 @@ const Projects = () => {
         {
             id: 0,
             project_name: 'Lifestyle Stores',
-            image: '/ProjectImages/lifestylestores.png',
+            image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/lifestylestores.png?raw=true',
             project_desc:
                 'This is an E-Commerce website which speciaizes in selling clothes and styling products. The website provides 800 brands and 33,000 products of different types of clothes, watches, sunglasses, shoes etc.',
             deploy_link: 'https://aadityaneve.github.io/Clone-lifestylestores',
@@ -29,7 +29,7 @@ const Projects = () => {
         {
             id: 1,
             project_name: 'Plural Sight',
-            image: '/ProjectImages/pluralsight.png',
+            image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/pluralsight.png?raw=true',
             project_desc:
                 'Pluralsight is an online learning and workforce development platform that helps businesses and individuals adjust to changing technology. Pluralsight provide products to build tech skills & Get insights into your workflow.',
             deploy_link: 'https://aadityaneve.github.io/Clone-Pluralsight',
@@ -46,7 +46,7 @@ const Projects = () => {
         {
             id: 2,
             project_name: 'Movie-App',
-            image: '/ProjectImages/movie-app.png',
+            image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/movie-app.png?raw=true',
             project_desc:
                 'A Movie platform that allows users to search and watch trailers of a wide variety of movies. This is a personal project.',
             deploy_link: 'https://aadityaneve.github.io/Movie-App',
@@ -64,7 +64,7 @@ const Projects = () => {
         {
             id: 3,
             project_name: 'Crypto-Tracker-App',
-            image: '/ProjectImages/crypto-tracker-app.png',
+            image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/crypto-tracker-app.png?raw=true',
             project_desc:
                 'A Crypto platform that allows users to search a wide variety of Crypto coins, and get details of it. This is a personal project.',
             deploy_link: 'https://aadityaneve.github.io/Crypto-Tracker-App',
@@ -74,7 +74,7 @@ const Projects = () => {
         {
             id: 4,
             project_name: 'Timer-Stopwatch',
-            image: '/ProjectImages/timer-stopwatch.png',
+            image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/timer-stopwatch.png?raw=true',
             project_desc:
                 'Its a app where a user can Timer watch as well as Stopwatch. This is a personal project.',
             deploy_link: 'https://aadityaneve.github.io/Timer-Stopwatch',
