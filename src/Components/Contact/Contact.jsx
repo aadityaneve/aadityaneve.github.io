@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
-import nodemailer from 'nodemailer';
+import React, { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
+
 import {
     ContactContainer,
     ContactForm,
@@ -31,7 +32,7 @@ const footerData = [
         display: '+91 7620220202',
         link: 'tel:+917620220202',
         icon: (
-            <FaPhone style={{color: 'grey'}} className='commonIconsFooter' />
+            <FaPhone style={{ color: 'grey' }} className='commonIconsFooter' />
         ),
     },
     {
@@ -39,35 +40,51 @@ const footerData = [
         title: 'Email',
         display: 'aditya.neve@gmail.com',
         link: 'mailto:aditya.neve@gmail.com',
-        icon: <SiGmail style={{color: 'grey'}} className='commonIconsFooter' />,
+        icon: (
+            <SiGmail style={{ color: 'grey' }} className='commonIconsFooter' />
+        ),
     },
     {
         id: 2,
         title: 'Github',
         display: 'Github',
         link: 'https://github.com/aadityaneve',
-        icon: <FaGithub style={{color: 'grey'}} className='commonIconsFooter' />,
+        icon: (
+            <FaGithub style={{ color: 'grey' }} className='commonIconsFooter' />
+        ),
     },
     {
         id: 3,
         title: 'LinkedIn',
         display: 'LinkedIn',
         link: 'https://www.linkedin.com/in/aadityaneve',
-        icon: <FaLinkedin style={{color: 'grey'}} className='commonIconsFooter' />,
+        icon: (
+            <FaLinkedin
+                style={{ color: 'grey' }}
+                className='commonIconsFooter'
+            />
+        ),
     },
     {
         id: 4,
         title: 'Twitter',
         display: 'Twitter',
         link: 'https://twitter.com/aadityaneve',
-        icon: <FaTwitter style={{color: 'grey'}} className='commonIconsFooter' />,
+        icon: (
+            <FaTwitter
+                style={{ color: 'grey' }}
+                className='commonIconsFooter'
+            />
+        ),
     },
     {
         id: 5,
         title: 'Medium',
         display: 'Medium',
         link: 'https://medium.com/@aadityaneve',
-        icon: <FaMedium style={{color: 'grey'}} className='commonIconsFooter' />,
+        icon: (
+            <FaMedium style={{ color: 'grey' }} className='commonIconsFooter' />
+        ),
     },
     /* {
         id: 6,
@@ -86,33 +103,40 @@ const footerData = [
 ];
 
 const Contact = () => {
-    const handleSend = (e) => {
+    const [emailSent, setEmailSent] = useState(false);
+
+    const handleSend = async (e) => {
         e.preventDefault();
-        let transporter = nodemailer.createTransport({
-            service: 'gmail',
-            // host: 'smtp.ethereal.email',
-            // port: 587,
-            // secure: false, // true for 465, false for other ports
-            auth: {
-                user: process.env.GMAIL_MAIL, // generated ethereal user
-                pass: process.env.GMAIL_PASSWORD, // generated ethereal password
-            },
-        });
 
-        let mailOptions = {
-            from: `${e.target.email.value}`,
-            to: 'aditya.neve@gmail.com',
-            subject: `${e.target.subject.value}`,
-            text: `${e.target.message.value}`,
-        };
+        const { name, subject, email, message } = e.target;
 
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.log('Mail Sending Failed.');
-            } else {
-                console.log('E-Mail Sent ', info.response);
-            }
-        });
+        emailjs
+            .send(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
+                {
+                    name: name.value,
+                    email: email.value,
+                    subject: subject.value,
+                    message: message.value,
+                },
+                process.env.REACT_APP_USER_ID
+            )
+            .then(
+                function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    setEmailSent(true);
+
+                    if (!emailSent) {
+                        setInterval(() => {
+                            setEmailSent(false);
+                        }, 5000);
+                    }
+                },
+                function (err) {
+                    console.log('FAILED...', err);
+                }
+            );
 
         e.target.reset();
     };
@@ -147,14 +171,23 @@ const Contact = () => {
                             name='message'
                             placeholder='Message'
                         ></InputInput2>
-                        <A value='Send'>SEND</A>
+                        <A
+                            value='Send'
+                            style={{ color: emailSent ? '#FFD479' : 'white' }}
+                        >
+                            {emailSent ? 'E-MAIL SENT' : 'SEND E-MAIL'}
+                        </A>
                         <ToastContainer />
                     </ContactForm>
                 </Column>
                 <Column>
                     <LinksCont>
                         {footerData.map((item) => (
-                            <div key={uuidv4()} title={item.title} style={{ display: 'flex' }}>
+                            <div
+                                key={uuidv4()}
+                                title={item.title}
+                                style={{ display: 'flex' }}
+                            >
                                 <div>
                                     {/* <a target="_blank" rel="noreferrer" href={item.link}  style={{textDecoration:"none"}}> */}
                                     {item.icon}
