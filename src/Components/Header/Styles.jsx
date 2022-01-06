@@ -3,12 +3,31 @@ import styled from 'styled-components';
 export const HeaderContent = styled.div`
     display: flex;
     align-items: center;
-    padding-top: 100px;
     height: 80vh;
     width: 70%;
     text-align: center;
     color: ${(props) => props.theme.fontColorSecondary};
     margin: 3em auto;
+
+    @media (max-width: 768px) {
+        padding-top: 150px;
+    }
+
+    @media (max-width: 640px) {
+        padding-top: 280px;
+    }
+
+    @media (max-width: 600px) {
+        padding-top: 180px;
+    }
+
+    @media (max-width: 460px) {
+        padding-top: 250px;
+    }
+
+    @media (max-width: 445px) {
+        padding-top: 300px;
+    }
 `;
 
 export const H1 = styled.h1`
@@ -20,6 +39,7 @@ export const H1 = styled.h1`
 `;
 
 export const TypeWriterH1 = styled.h1`
+    height: 90px;
     font-size: 35px;
     margin-bottom: 20px;
     color: ${(props) => props.theme.fontColorHeader};

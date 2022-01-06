@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AboutDiv = styled.div`
     width: 80%;
-    margin: 0 auto;
+    margin: 200px auto auto auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

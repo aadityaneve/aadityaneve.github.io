@@ -79,10 +79,10 @@ const NavBarDiv = styled.div`
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     padding-left: 50px;
     padding-right: 50px;
+    justify-content: space-evenly;
+    align-items: center;
     display: flex;
     height: 68px;
-    align-items: center;
-    justify-content: space-between;
 
     @media (max-width: 768px) {
         padding-left: 20px;
@@ -90,13 +90,44 @@ const NavBarDiv = styled.div`
     }
 
     @media (max-width: 640px) {
-        padding-left: 10px;
-        padding-right: 10px;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+
+        // width: 100%;
+        display: flex;
+        // left: -25px;
+        flex-direction: column;
+        padding-top: 10px;
+        gap: 10px;
+
+        padding-left: 0px;
+        padding-right: 0px;
+
+        & > div:nth-child(3) {
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 10px;
+        }
+
     }
 
     @media (max-width: 445px) {
+        display: flex;
+        // left: -25px;
+        flex-direction: column;
+        padding-top: 10px;
+        gap: 10px;
+
         padding-left: 0px;
         padding-right: 0px;
+
+        & > div:nth-child(3) {
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 10px;
+        }
     }
 `;
 

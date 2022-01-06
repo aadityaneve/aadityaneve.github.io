@@ -32,7 +32,7 @@ a:link {
 }
 
 body::-webkit-scrollbar {
-    width: 6px;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-track {

@@ -1,5 +1,4 @@
 import React from 'react';
-import anime from 'animejs/lib/anime.es.js';
 import {
     StatsContCont,
     StatsCont,
@@ -10,37 +9,12 @@ import {
 } from './Styles';
 import { Container } from '../../SharedStyles/SharedStyles';
 const Stats = () => {
-    let numberAnimation = anime({
-        targets: 'h1',
-        value: [0, 1200],
-        round: 3,
-        easing: 'easeInOutExpo',
-    });
-
-    /* let animation = anime({
-        targets: 'h1',
-        // Properties
-        translateX: 100,
-        borderRadius: 50,
-        // Property Parameters
-        duration: 2000,
-        easing: 'linear',
-        // Animation Parameters
-        direction: 'alternate',
-    }); */
-
     return (
         <Container>
             <StatsContCont>
                 <StatsCont>
-                    <StatsContDiv>
-                        <StatsContH1
-                            value={0}
-                            max={1200}
-                            onClick={numberAnimation.restart}
-                        >
-                            1200
-                        </StatsContH1>
+                    <StatsContDiv className='dom-attribute-demo'>
+                        <StatsContH1>1200+</StatsContH1>
                         <StatsContH3>Hours of coding</StatsContH3>
                     </StatsContDiv>
                     <StatsContDiv>
