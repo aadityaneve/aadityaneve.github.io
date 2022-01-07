@@ -4,10 +4,14 @@ export const AboutDiv = styled.div`
     width: 80%;
     // margin: 200px auto auto auto;
     margin: auto;
-    margin-top: 280px;
+    margin-top: 2em;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    @media (max-width: 768px) {
+        margin-top: 250px;
+    }
 `;
 
 export const Column = styled.div`
