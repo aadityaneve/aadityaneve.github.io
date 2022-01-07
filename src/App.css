@@ -10,6 +10,26 @@ body {
     font-family: 'Inter', 'sans-serif';
 }
 
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 445px) {
+    .app {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
 .commonIcons {
     font-size: 70px;
     margin-bottom: 15px;

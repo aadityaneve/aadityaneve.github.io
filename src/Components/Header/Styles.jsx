@@ -6,8 +6,9 @@ export const HeaderContent = styled.div`
     height: 80vh;
     width: 70%;
     text-align: center;
+    margin: auto;
     color: ${(props) => props.theme.fontColorSecondary};
-    margin: 3em auto;
+    margin-top: 3em;
 
     @media (max-width: 768px) {
         padding-top: 150px;
