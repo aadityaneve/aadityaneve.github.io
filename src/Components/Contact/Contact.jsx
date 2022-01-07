@@ -112,15 +112,15 @@ const Contact = () => {
 
         emailjs
             .send(
-                process.env.REACT_APP_SERVICE_ID,
-                process.env.REACT_APP_TEMPLATE_ID,
+                'service_73nxajb',
+                'template_g8iqlva',
                 {
                     name: name.value,
                     email: email.value,
                     subject: subject.value,
                     message: message.value,
                 },
-                process.env.REACT_APP_USER_ID
+                'user_EnJXFXSrCu2oExDbUCpNz'
             )
             .then(
                 function (response) {
