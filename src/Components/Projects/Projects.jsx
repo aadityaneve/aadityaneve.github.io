@@ -10,14 +10,22 @@ import {
     BoxDiv,
 } from './Styles';
 import { Container, Common, H1 } from '../../SharedStyles/SharedStyles';
+import { AiFillGithub } from 'react-icons/ai';
 import { FaHtml5, FaReact, FaJs, FaCss3 } from 'react-icons/fa';
-import { SiMongodb, SiNodeDotJs, SiRedux, SiHeroku } from 'react-icons/si';
+import {
+    SiMongodb,
+    SiNodeDotJs,
+    SiRedux,
+    SiHeroku,
+    SiMaterialui,
+    SiExpress,
+} from 'react-icons/si';
 import { v4 as uuidv4 } from 'uuid';
 
 const Projects = () => {
     const projects = [
         {
-            id: 0,
+            id: 1,
             project_name: 'Lifestyle Stores',
             image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/lifestylestores.png?raw=true',
             project_desc:
@@ -27,7 +35,7 @@ const Projects = () => {
             tech_stack: [<FaHtml5 />, <FaCss3 />, <FaJs />],
         },
         {
-            id: 1,
+            id: 2,
             project_name: 'Plural Sight',
             image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/pluralsight.png?raw=true',
             project_desc:
@@ -44,7 +52,26 @@ const Projects = () => {
             ],
         },
         {
-            id: 2,
+            id: 3,
+            project_name: 'Mento',
+            image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/mento.png?raw=true',
+            project_desc:
+                "Mento is an online alternative education platform where India's best industry experts teach you. Here you can get all the information on how to do a certified course for a particular field as well as find internship opportunities to learn on the job.",
+            deploy_link: 'https://aadityaneve.github.io/mento-front-end',
+            repo_link: 'https://github.com/aadityaneve/mento-front-end',
+            tech_stack: [
+                <FaReact />,
+                <SiRedux />,
+                <SiMaterialui />,
+                <SiMongodb />,
+                // <SiExpress />,
+                <AiFillGithub />,
+                <FaJs />,
+                <FaNodeJs />,
+            ],
+        },
+        {
+            id: 4,
             project_name: 'Movie-App',
             image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/movie-app.png?raw=true',
             project_desc:
@@ -62,7 +89,7 @@ const Projects = () => {
             ],
         },
         {
-            id: 3,
+            id: 5,
             project_name: 'Crypto-Tracker-App',
             image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/crypto-tracker-app.png?raw=true',
             project_desc:
@@ -72,7 +99,7 @@ const Projects = () => {
             tech_stack: [<FaReact />, <FaJs />, <FaHtml5 />, <FaCss3 />],
         },
         {
-            id: 4,
+            id: 6,
             project_name: 'Timer-Stopwatch',
             image: 'https://github.com/aadityaneve/Portfolio/blob/master/public/ProjectImages/timer-stopwatch.png?raw=true',
             project_desc:
