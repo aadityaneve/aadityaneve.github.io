@@ -12,14 +12,9 @@ import {
 import { Container, Common, H1 } from '../../SharedStyles/SharedStyles';
 import { AiFillGithub } from 'react-icons/ai';
 import { FaHtml5, FaReact, FaJs, FaCss3 } from 'react-icons/fa';
-import {
-    SiMongodb,
-    SiNodeDotJs,
-    SiRedux,
-    SiHeroku,
-    SiMaterialui,
-    SiExpress,
-} from 'react-icons/si';
+import { SiMongodb, SiNodeDotJs, SiRedux, SiHeroku } from 'react-icons/si';
+// import { SiExpress, SiMaterialui } from 'react-icons/si/SiExpress';
+
 import { v4 as uuidv4 } from 'uuid';
 
 const Projects = () => {
@@ -62,7 +57,7 @@ const Projects = () => {
             tech_stack: [
                 <FaReact />,
                 <SiRedux />,
-                <SiMaterialui />,
+                // <SiMaterialui />,
                 <SiMongodb />,
                 // <SiExpress />,
                 <AiFillGithub />,
