@@ -33,7 +33,7 @@ const Banner = () => {
                     <HeaderButtons>
                         <A
                             target='_blank'
-                            rel='noreferrer'
+                            rel='noopener noreferrer'
                             href='https://github.com/aadityaneve/Portfolio/raw/master/public/resume/aditya-neve-resume-full-stack-web-dev.pdf'
                         >
                             Resume
